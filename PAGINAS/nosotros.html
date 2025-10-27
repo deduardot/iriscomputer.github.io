@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-key="nosotros_titulo_pagina">
+      Sobre Nosotros - Iris Computer
+    </title>
+    <link rel="stylesheet" href="..\estilos\estilo1.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="header-left">
+          <a href="index.html"
+            ><img
+              src="..\imagenes\logo de iris.png"
+              alt="Logo de la Tienda"
+              class="logo"
+          /></a>
+          <nav class="nav">
+            <button
+              id="open-side-menu-btn"
+              class="nav-link"
+              data-key="nav_mapa"
+            >
+              Mapa del Sitio
+            </button>
+			<div class="dropdown">
+                <button class="dropdown-btn">Categor��as</button>
+                <div class="dropdown-content">
+                    <a href="categoria.html?tipo=Almacenamiento">Almacenamiento</a>
+                    <a href="categoria.html?tipo=CPU">CPU</a>
+                    <a href="categoria.html?tipo=Fuente de poder">Fuente de poder</a>
+                    <a href="categoria.html?tipo=Gabinete">Gabinete</a>
+                    <a href="categoria.html?tipo=GPU">GPU</a>
+                    <a href="categoria.html?tipo=Laptop">Laptop</a>
+                    <a href="categoria.html?tipo=Memoria RAM">Memoria RAM</a>
+                    <a href="categoria.html?tipo=Monitor">Monitor</a>
+                    <a href="categoria.html?tipo=Placa madre">Placa madre</a>
+                    <a href="categoria.html?tipo=Refrigeracion">Refrigeracion</a>
+                </div>
+             </div>
+            <a href="nosotros.html" class="nav-link" data-key="nav_nosotros"
+              >Sobre Nosotros</a
+            >
+            <a href="catalogo.html" class="nav-link" data-key="nav_productos"
+              >Productos</a
+            >
+            <a href="contactos.html" class="nav-link" data-key="nav_contactos"
+              >Contactos</a
+            >
+          </nav>
+        </div>
+        <div class="header-center">
+          <form action="busqueda.html" method="GET">
+            <input
+              type="search"
+              name="q"
+              placeholder="Buscar productos..."
+              class="search-bar"
+              data-key="search_placeholder"
+            />
+          </form>
+        </div>
+        <div class="header-right">
+          <div class="dropdown">
+            <button class="dropdown-btn" data-key="nav_tema">Tema</button>
+            <div class="dropdown-content">
+              <a href="#" id="theme-light" data-key="nav_claro">Claro</a>
+              <a href="#" id="theme-dark" data-key="nav_oscuro">Oscuro</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown-btn" data-key="nav_idioma">Idioma</button>
+            <div class="dropdown-content">
+              <a href="#" id="lang-es">Español</a>
+              <a href="#" id="lang-en">English</a>
+            </div>
+          </div>
+          <a
+            href="iniciosesion.html"
+            class="nav-link"
+            data-key="nav_iniciar_sesion"
+            >Iniciar Sesión / Registrarse</a
+          >
+          <a href="carrito.html" class="nav-link">🛒</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="about-us-main">
+      <section class="about-hero">
+        <div class="hero-content">
+          <h1 data-key="nosotros_hero_titulo">
+            Nuestra Pasión es la Tecnología
+          </h1>
+          <p data-key="nosotros_hero_desc">
+            Conectando Bolivia con el futuro, un componente a la vez.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2 data-key="nosotros_historia_titulo">Nuestra Historia</h2>
+        <p data-key="nosotros_historia_desc">
+          Iris Computer nació en 2020 de la visión de un pequeño grupo de
+          entusiastas de la tecnología en Santa Cruz. Lo que comenzó como un
+          modesto taller de ensamblaje de PCs personalizadas, rápidamente se
+          convirtió en un referente de calidad y confianza. Impulsados por la
+          pasión y el compromiso, hemos crecido para convertirnos en uno de los
+          principales proveedores de componentes de Bolivia, siempre manteniendo
+          nuestro espíritu original: ofrecer potencia y rendimiento accesibles
+          para todos.
+        </p>
+      </section>
+
+      <section class="about-grid">
+        <div class="grid-item">
+          <h3 data-key="nosotros_mision_titulo">Nuestra Misión</h3>
+          <p data-key="nosotros_mision_desc">
+            Empoderar a cada boliviano, desde gamers y creadores de contenido
+            hasta profesionales y estudiantes, con la mejor tecnología y un
+            servicio al cliente excepcional que guíe y apoye cada paso de su
+            viaje digital.
+          </p>
+        </div>
+        <div class="grid-item">
+          <h3 data-key="nosotros_vision_titulo">Nuestra Visión</h3>
+          <p data-key="nosotros_vision_desc">
+            Ser la empresa de tecnología más confiable y querida de Bolivia,
+            liderando la innovación y fomentando una comunidad donde la pasión
+            por el hardware y el software nos una para construir el futuro.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-section values-section">
+        <h2 data-key="nosotros_valores_titulo">Nuestros Valores</h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <h4 data-key="nosotros_valor1_titulo">Confianza</h4>
+            <p data-key="nosotros_valor1_desc">
+              Actuamos con integridad y transparencia en cada interacción.
+            </p>
+          </div>
+          <div class="value-card">
+            <h4 data-key="nosotros_valor2_titulo">Calidad</h4>
+            <p data-key="nosotros_valor2_desc">
+              Ofrecemos solo productos que cumplen con los más altos estándares.
+            </p>
+          </div>
+          <div class="value-card">
+            <h4 data-key="nosotros_valor3_titulo">Pasión</h4>
+            <p data-key="nosotros_valor3_desc">
+              Amamos lo que hacemos y compartimos ese entusiasmo con nuestros
+              clientes.
+            </p>
+          </div>
+          <div class="value-card">
+            <h4 data-key="nosotros_valor4_titulo">Comunidad</h4>
+            <p data-key="nosotros_valor4_desc">
+              Construimos relaciones duraderas con clientes y colaboradores.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section team-section">
+        <h2 data-key="nosotros_equipo_titulo">Conoce a Nuestro Equipo</h2>
+        <div class="team-grid">
+          <div class="team-member">
+            <img
+              src="..\imagenes\team-member-1.jpg"
+              alt="Foto de Dilan Tapia"
+            />
+            <h4>Dilan Tapia</h4>
+            <p data-key="nosotros_equipo1_cargo">Fundador y CEO</p>
+          </div>
+          <div class="team-member">
+            <img
+              src="..\imagenes\team-member-2.jpg"
+              alt="Foto de Gerson Lopez"
+            />
+            <h4>Gerson Lopez</h4>
+            <p data-key="nosotros_equipo2_cargo">Gerente de Ventas</p>
+          </div>
+          <div class="team-member">
+            <img src="..\imagenes\johan.jpg" alt="Foto de Johan Muñoz" />
+            <h4>Johan Muñoz</h4>
+            <p data-key="nosotros_equipo3_cargo">Técnico Especialista</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="chatbot-container">
+      <div id="chat-window">
+        <div class="chat-header">
+          <h3>Asistente Virtual</h3>
+        </div>
+        <div id="chat-messages"></div>
+        <div class="chat-input-container">
+          <input
+            type="text"
+            id="chat-input"
+            placeholder="Escribe tu mensaje..."
+          />
+          <button id="chat-send-btn">�?/button>
+        </div>
+      </div>
+      <button id="chatbot-toggle-btn">
+        <img src="..\imagenes\chatbot1.png" alt="Chat" class="icon" />
+        <span class="close-icon">&times;</span>
+      </button>
+    </div>
+    <footer class="footer">
+      <p data-key="footer_derechos">
+        &copy; 2025 Iris Computer. Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script src="..\scripts\script1.js"></script>
+    <script src="..\scripts\chatbot.js"></script>
+    <div id="page-overlay" class="page-overlay"></div>
+    <div id="side-navigation-menu" class="side-menu">
+        <div class="side-menu-header">
+            <h3>Mapa del Sitio</h3>
+            <button id="close-side-menu-btn" class="close-btn">&times;</button>
+        </div>
+        <div class="side-menu-content">
+            <div class="map-item">
+                <h4>En Esta Página</h4>
+                <ul>
+                    <li><a href="index.html#servicios">🏆 Servicios y Ventajas</a></li>
+                    <li><a href="index.html#oferta-flash">🔥 Oferta Flash</a></li>
+                </ul>
+            </div>
+            <div class="map-item">
+                <h4>Otras Páginas</h4>
+                <ul>
+                    <li><a href="catalogo.html">📖 Catálogo Completo</a></li>
+                    <li><a href="sobre-nosotros.html">🏢 Sobre Nosotros</a></li>
+                    <li><a href="contactos.html">📞 Contacto</a></li>
+                    <li><a href="iniciosesion.html">👤 Iniciar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

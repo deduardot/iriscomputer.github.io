@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-key="catalogo_titulo_pagina">
+      Todos los Productos - Tienda de Computación
+    </title>
+    <link rel="stylesheet" href="..\estilos\estilo1.css" />
+    <link rel="stylesheet" href="..\estilos\estilo2.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="header-left">
+          <a href="index.html"
+            ><img
+              src="..\imagenes\logo de iris.png"
+              alt="Logo de la Tienda"
+              class="logo"
+          /></a>
+          <nav class="nav">
+            <button
+              id="open-side-menu-btn"
+              class="nav-link"
+              data-key="nav_mapa"
+            >
+              Mapa del Sitio
+            </button>
+			<div class="dropdown">
+                        <button class="dropdown-btn">Categorías</button>
+                        <div class="dropdown-content">
+                            <a href="categoria.html?tipo=Almacenamiento">Almacenamiento</a>
+                            <a href="categoria.html?tipo=CPU">CPU</a>
+                            <a href="categoria.html?tipo=Fuente de poder">Fuente de poder</a>
+                            <a href="categoria.html?tipo=Gabinete">Gabinete</a>
+                            <a href="categoria.html?tipo=GPU">GPU</a>
+                            <a href="categoria.html?tipo=Laptop">Laptop</a>
+                            <a href="categoria.html?tipo=Memoria RAM">Memoria RAM</a>
+                            <a href="categoria.html?tipo=Monitor">Monitor</a>
+                            <a href="categoria.html?tipo=Placa madre">Placa madre</a>
+                            <a href="categoria.html?tipo=Refrigeracion">Refrigeracion</a>
+                        </div>
+                    </div>
+            <a href="nosotros.html" class="nav-link" data-key="nav_nosotros"
+              >Sobre Nosotros</a
+            >
+            <a href="catalogo.html" class="nav-link" data-key="nav_productos"
+              >Productos</a
+            >
+            <a href="contactos.html" class="nav-link" data-key="nav_contactos"
+              >Contactos</a
+            >
+          </nav>
+        </div>
+        <div class="header-center">
+          <form action="busqueda.html" method="GET">
+            <input
+              type="search"
+              name="q"
+              placeholder="Buscar productos..."
+              class="search-bar"
+              data-key="search_placeholder"
+            />
+          </form>
+        </div>
+        <div class="header-right">
+          <div class="dropdown">
+            <button class="dropdown-btn" data-key="nav_tema">Tema</button>
+            <div class="dropdown-content">
+              <a href="#" id="theme-light" data-key="nav_claro">Claro</a>
+              <a href="#" id="theme-dark" data-key="nav_oscuro">Oscuro</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown-btn" data-key="nav_idioma">Idioma</button>
+            <div class="dropdown-content">
+              <a href="#" id="lang-es">Español</a>
+              <a href="#" id="lang-en">English</a>
+            </div>
+          </div>
+          <a
+            href="iniciosesion.html"
+            class="nav-link"
+            data-key="nav_iniciar_sesion"
+            >Iniciar Sesión / Registrarse</a
+          >
+          <a href="carrito.html" class="nav-link">🛒</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="busqueda-main">
+      <section class="results-section">
+        <h2 data-key="catalogo_titulo">Nuestro Catálogo Completo</h2>
+        <div id="productsContainer" class="products-grid"></div>
+      </section>
+    </main>
+    <div id="chatbot-container">
+      <div id="chat-window">
+        <div class="chat-header">
+          <h3>Asistente Virtual</h3>
+        </div>
+        <div id="chat-messages"></div>
+        <div class="chat-input-container">
+          <input
+            type="text"
+            id="chat-input"
+            placeholder="Escribe tu mensaje..."
+          />
+          <button id="chat-send-btn">➤</button>
+        </div>
+      </div>
+      <button id="chatbot-toggle-btn">
+        <img src="..\imagenes\chatbot1.png" alt="Chat" class="icon" />
+        <span class="close-icon">&times;</span>
+      </button>
+    </div>
+    <footer class="footer">
+      <p data-key="footer_derechos">
+        &copy; 2025 Iris Computer. Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <div id="productModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div class="modal-header">
+          <h3 id="modalProductName">Nombre del Producto</h3>
+        </div>
+        <div class="modal-body">
+          <div class="modal-product-image">
+            <img id="modalProductImage" src="" alt="Imagen del Producto" />
+          </div>
+          <div class="modal-product-details">
+            <p class="modal-product-price" id="modalProductPrice">Bs. 0.00</p>
+            <h4 data-key="modal_desc_titulo">Descripción Completa</h4>
+            <p id="modalProductDesc"></p>
+            <h4 data-key="modal_specs_titulo">Especificaciones</h4>
+            <ul id="modalProductSpecs"></ul>
+            <p id="modalProductStock"></p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            class="btn-secondary close-button"
+            data-key="modal_boton_cerrar"
+          >
+            Cerrar
+          </button>
+          <button class="btn-primary" data-key="modal_boton_seleccionar">
+            Seleccionar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="..\scripts\busqueda.js"></script>
+    <script src="..\scripts\catalogo.js"></script>
+    <script src="..\scripts\script1.js"></script>
+    <script src="..\scripts\chatbot.js"></script>
+
+    <div id="page-overlay" class="page-overlay"></div>
+    <div id="side-navigation-menu" class="side-menu">
+        <div class="side-menu-header">
+            <h3>Mapa del Sitio</h3>
+            <button id="close-side-menu-btn" class="close-btn">&times;</button>
+        </div>
+        <div class="side-menu-content">
+            <div class="map-item">
+                <h4>En Esta Página</h4>
+                <ul>
+                    <li><a href="index.html#servicios">🏆 Servicios y Ventajas</a></li>
+                    <li><a href="index.html#oferta-flash">🔥 Oferta Flash</a></li>
+                </ul>
+            </div>
+            <div class="map-item">
+                <h4>Otras Páginas</h4>
+                <ul>
+                    <li><a href="catalogo.html">📖 Catálogo Completo</a></li>
+                    <li><a href="sobre-nosotros.html">🏢 Sobre Nosotros</a></li>
+                    <li><a href="contactos.html">📞 Contacto</a></li>
+                    <li><a href="iniciosesion.html">👤 Iniciar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

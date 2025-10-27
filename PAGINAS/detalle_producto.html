@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Detalles del Producto</title>
+    <link rel="stylesheet" href="..\estilos\estilo1.css">
+    <link rel="stylesheet" href="..\estilos\estilo2.css"> 
+    <link rel="stylesheet" href="..\estilos\detalle_producto.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <a href="index.html"><img src="..\imagenes\logo de iris.png" alt="Logo" class="logo"></a>
+                <nav class="nav">
+                    <div class="dropdown">
+                        <button class="dropdown-btn">Categorías</button>
+                        <div class="dropdown-content">
+                            <a href="categoria.html?tipo=Almacenamiento">Almacenamiento</a>
+                            <a href="categoria.html?tipo=CPU">CPU</a>
+                            <a href="categoria.html?tipo=Fuente de poder">Fuente de poder</a>
+                            <a href="categoria.html?tipo=Gabinete">Gabinete</a>
+                            <a href="categoria.html?tipo=GPU">GPU</a>
+                            <a href="categoria.html?tipo=Laptop">Laptop</a>
+                            <a href="categoria.html?tipo=Memoria RAM">Memoria RAM</a>
+                            <a href="categoria.html?tipo=Monitor">Monitor</a>
+                            <a href="categoria.html?tipo=Placa madre">Placa madre</a>
+                            <a href="categoria.html?tipo=Refrigeracion">Refrigeracion</a>
+                        </div>
+                    </div>
+                    <a href="#" class="nav-link">Sobre Nosotros</a>
+                </nav>
+            </div>
+            <div class="header-center">
+                <form action="busqueda.html" method="GET">
+                    <input type="search" name="q" id="searchBar" placeholder="Buscar..." class="search-bar">
+                </form>
+            </div>
+            <div class="header-right">
+                <a href="iniciarsesion.html" class="nav-link">Iniciar Sesión / Registrarse</a>
+                <a href="carrito.html" class="nav-link cart-icon-link">
+                    🛒
+                    <span id="cart-counter">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="product-detail-container">
+            <div class="product-detail-image-gallery">
+                <div class="main-image-container">
+                    <img id="mainProductImage" class="main-image" src="" alt="Producto principal">
+                </div>
+                <div class="thumbnail-gallery" id="thumbnailGallery">
+                    </div>
+            </div>
+
+            <div class="product-detail-info">
+                <h1 id="productName"></h1>
+                <p class="category-text">Categoría: <span id="productCategory"></span></p>
+                
+                <div class="rating-section">
+                    <div id="productStars" class="stars-container">
+                        </div>
+                    <span id="ratingValue" class="rating-value"></span>
+                    <span id="reviewsCount" class="reviews-count"></span>
+                </div>
+
+                <p class="price" id="productPrice"></p>
+                <p class="stock-status" id="productStock"></p>
+
+                <div class="quantity-control">
+                    <label for="quantityInput">Cantidad:</label>
+                    <button id="minusBtn">-</button>
+                    <input type="number" id="quantityInput" value="1" min="1">
+                    <button id="plusBtn">+</button>
+                </div>
+                <button id="addToCartBtn" class="add-to-cart-btn">Agregar al Carrito</button>
+
+                <div class="product-description">
+                    <h2>Descripción Detallada</h2>
+                    <p id="productLongDescription"></p>
+                </div>
+
+                <div class="product-specs-list">
+                    <h2>Especificaciones Técnicas</h2>
+                    <ul id="productSpecs">
+                        </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="customer-reviews-section product-detail-container">
+            <h2>Calificaciones y Reseñas de Clientes</h2>
+            <div id="reviewSummary">
+                </div>
+            <div id="reviewExamples">
+                <div class="review-example">
+                    <h4>Excelente producto, justo lo que necesitaba</h4>
+                    <div class="review-stars">★★★★★</div>
+                    <p>Compré este producto hace un mes y estoy muy satisfecho con su rendimiento. Superó mis expectativas en todos los sentidos. Lo recomiendo totalmente a cualquiera que lo busque.</p>
+                    <p class="reviews-count">Por Juan P. - 12 de Junio, 2024</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Iris computer. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="..\scripts\busqueda.js"></script> 
+    <script src="..\scripts\detalle_producto.js"></script> 
+    <script src="..\scripts\script1.js"></script>
+</body>
+</html>

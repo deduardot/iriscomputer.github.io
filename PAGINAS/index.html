@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iris Computer</title>
+    <link rel="stylesheet" href="..\estilos\estilo1.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="header-left">
+          <img
+            src="..\imagenes\logo de iris.png"
+            alt="Logo de la Tienda"
+            class="logo"
+          />
+          <nav class="nav">
+            <button
+              id="open-side-menu-btn"
+              class="nav-link"
+              data-key="nav_mapa"
+            >
+              Mapa del Sitio
+            </button>
+			<div class="dropdown">
+                <button class="dropdown-btn" data-key="nav_categorias">Categorías</button>
+                <div class="dropdown-content">
+                    <a href="categoria.html?tipo=Almacenamiento" data-key="cat_almacenamiento">Almacenamiento</a> 
+                <a href="categoria.html?tipo=CPU" data-key="cat_cpu">CPU</a> 
+                <a href="categoria.html?tipo=Fuente de poder" data-key="cat_fuente">Fuente de poder</a> 
+                <a href="categoria.html?tipo=Gabinete" data-key="cat_gabinete">Gabinete</a> 
+                <a href="categoria.html?tipo=GPU" data-key="cat_gpu">GPU</a> 
+                <a href="categoria.html?tipo=Laptop" data-key="cat_laptop">Laptop</a> 
+                <a href="categoria.html?tipo=Memoria RAM" data-key="cat_ram">Memoria RAM</a> 
+                <a href="categoria.html?tipo=Monitor" data-key="cat_monitor">Monitor</a> 
+                <a href="categoria.html?tipo=Placa madre" data-key="cat_placa">Placa madre</a> 
+                <a href="categoria.html?tipo=Refrigeracion" data-key="cat_refri">Refrigeracion</a> 
+                </div>
+             </div>
+            <a href="nosotros.html" class="nav-link" data-key="nav_nosotros"
+              >Sobre Nosotros</a
+            >
+            <a href="catalogo.html" class="nav-link" data-key="nav_productos"
+              >Productos</a
+            >
+            <a href="contactos.html" class="nav-link" data-key="nav_contactos"
+              >Contactos</a
+            >
+          </nav>
+        </div>
+        <div class="header-center">
+          <form action="busqueda.html" method="GET">
+            <input
+              type="search"
+              name="q"
+              placeholder="Buscar productos..."
+              class="search-bar"
+              id="searchbar"
+              data-key="search_placeholder"
+            />
+          </form>
+        </div>
+        <div class="header-right">
+          <div class="dropdown">
+            <button class="dropdown-btn" data-key="nav_tema">Tema</button>
+            <div class="dropdown-content">
+              <a href="#" id="theme-light" data-key="nav_claro">Claro</a>
+              <a href="#" id="theme-dark" data-key="nav_oscuro">Oscuro</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown-btn" data-key="nav_idioma">Idioma</button>
+            <div class="dropdown-content">
+              <a href="#" id="lang-es">Español</a>
+              <a href="#" id="lang-en">English</a>
+            </div>
+          </div>
+          <a
+            href="iniciosesion.html"
+            class="nav-link"
+            >Iniciar Sesión / Registrarse</a
+          >
+          <a href="carrito.html" class="nav-link">🛒</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="slider">
+        <div class="slide">
+          <img
+            src="..\imagenes\curvo oferta xiaomi.webp"
+            alt="Monitor Curvo Xiaomi"
+          />
+        </div>
+        <div class="slide">
+          <img src="..\imagenes\teclado oferta.webp" alt="Teclado Gamer" />
+        </div>
+        <div class="slide">
+          <img src="..\imagenes\mouse oferta.webp" alt="Mouse ReDragon" />
+        </div>
+      </section>
+
+      <section id="servicios" class="value-proposition">
+        <div class="value-item">
+          <span class="icon">🚀</span>
+          <h3 data-key="serv_envio_titulo">Envío Rápido y Seguro</h3>
+          <p data-key="serv_envio_desc">
+            Recibe tus componentes en tiempo récord.
+          </p>
+        </div>
+        <div class="value-item">
+          <span class="icon">🛡️</span>
+          <h3 data-key="serv_garantia_titulo">Garantía de 12 Meses</h3>
+          <p data-key="serv_garantia_desc">
+            Cobertura total contra defectos de fábrica.
+          </p>
+        </div>
+        <div class="value-item">
+          <span class="icon">💲</span>
+          <h3 data-key="serv_precios_titulo">Precios Competitivos</h3>
+          <p data-key="serv_precios_desc">
+            Calidad premium al mejor precio del mercado.
+          </p>
+        </div>
+        <div class="value-item">
+          <span class="icon">💳</span>
+          <h3 data-key="serv_pagos_titulo">Múltiples Pagos</h3>
+          <p data-key="serv_pagos_desc">
+            Aceptamos tarjetas de débito, crédito y transferencias.
+          </p>
+        </div>
+      </section>
+
+      <div id="page-overlay" class="page-overlay"></div>
+      <div id="side-navigation-menu" class="side-menu">
+        <div class="side-menu-header">
+          <h3 data-key="mapa_titulo">Mapa del Sitio</h3>
+          <button id="close-side-menu-btn" class="close-btn">&times;</button>
+        </div>
+        <div class="side-menu-content">
+          <div class="map-item">
+            <h4 data-key="mapa_en_pagina">En Esta Página</h4>
+            <ul>
+              <li>
+                <a href="#servicios" data-key="mapa_servicios"
+                  >🏆 Servicios y Ventajas</a
+                >
+              </li>
+              <li>
+                <a href="#oferta-flash" data-key="mapa_oferta"
+                  >🔥 Oferta Flash</a
+                >
+              </li>
+              <li>
+                <a href="#productos-recomendados" data-key="mapa_productos"
+                  >🖥️ Productos</a
+                >
+              </li>
+              <li>
+                <a href="#testimonios" data-key="mapa_opiniones"
+                  >⭐ Opiniones</a
+                >
+              </li>
+              <li>
+                <a href="#suscripcion" data-key="mapa_suscripcion"
+                  >✉️ Suscripción</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="map-item">
+            <h4 data-key="mapa_otras_paginas">Otras Páginas</h4>
+            <ul>
+              <li>
+                <a href="catalogo.html" data-key="mapa_catalogo"
+                  >📖 Catálogo Completo</a
+                >
+              </li>
+              <li>
+                <a href="sobre-nosotros.html" data-key="mapa_nosotros"
+                  >🏢 Sobre Nosotros</a
+                >
+              </li>
+              <li>
+                <a href="contactos.html" data-key="mapa_contacto"
+                  >📞 Contacto</a
+                >
+              </li>
+              <li>
+                <a href="iniciosesion.html" data-key="mapa_sesion"
+                  >👤 Iniciar Sesión</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <section id="oferta-flash" class="flash-sale">
+        <h2 data-key="flash_titulo">🔥 Oferta Flash - Solo Hoy 🔥</h2>
+        
+        <div class="offer-carousel">
+          <div class="offer-carousel-wrapper">
+            
+            <div class="offer-card">
+              <div class="sale-content">
+                <img src="..\imagenes\ryzen 7 4700g.webp" alt="Procesador Ryzen 7"/>
+                <div class="sale-details">
+                  <h3 data-key="flash_producto">Procesador Ryzen 7 4700G</h3>
+                  <p class="old-price">Bs. 2200</p>
+                  <p class="new-price">Bs. 1800</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="offer-card">
+              <div class="sale-content">
+                <img src="..\imagenes\ventus rtx 5080.webp" alt="Tarjeta de Video RTX 5080"/>
+                <div class="sale-details">
+                  <h3>MSI VENTUS 3X RTX 5080</h3>
+                  <p class="old-price">Bs. 26500</p>
+                  <p class="new-price">Bs. 25800</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="offer-card">
+                <div class="sale-content">
+                  <img src="..\imagenes\ssd.png" alt="SSD Samsung 1TB"/>
+                  <div class="sale-details">
+                    <h3>SSD Samsung 980 Pro 1TB</h3>
+                    <p class="old-price">Bs. 1400</p>
+                    <p class="new-price">Bs. 1250</p>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+          
+          <button id="prev-offer-btn" class="carousel-nav-btn prev">‹</button>
+          <button id="next-offer-btn" class="carousel-nav-btn next">›</button>
+        </div>
+
+        <div class="flash-sale-footer">
+          <a href="catalogo.html" class="buy-btn" data-key="flash_boton">¡Ver Ofertas!</a>
+          <div class="countdown">
+            <span data-key="flash_tiempo">Tiempo restante:</span>
+            <span id="timer">00:00:00</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="productos-recomendados" class="recommended-products">
+        <h2 data-key="recomendados_titulo">Productos Recomendados</h2>
+        <div class="products-grid">
+          <div class="product-card">
+            <img src="..\imagenes\ryzen 7 4700g.webp" alt="Laptop Gamer" />
+            <h3>RYZEN 7 4700G</h3>
+            <p>Bs. 1800</p>
+          </div>
+          <div class="product-card">
+            <img
+              src="..\imagenes\asus prime b550 wifi.webp"
+              alt="Monitor Curvo"
+            />
+            <h3>ASUS PRIME B550M-A WIFI"</h3>
+            <p>Bs. 1880</p>
+          </div>
+          <div class="product-card">
+            <img
+              src="..\imagenes\ventus rtx 5080.webp"
+              alt="Teclado Mecánico"
+            />
+            <h3>MSI VENTUS 3X RTX 5080</h3>
+            <p>Bs. 25800</p>
+          </div>
+          <div class="product-card">
+            <img
+              src="..\imagenes\corsair bronze.webp"
+              alt="Mouse Inalámbrico"
+            />
+            <h3>CORSAIR CX650 Bronze</h3>
+            <p>Bs. 898</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonios" class="testimonials">
+        <h2 data-key="testimonios_titulo">Lo que dicen nuestros clientes</h2>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <p data-key="testimonio1">
+              "Excelente servicio y los mejores precios en La Paz. La calidad de
+              los componentes es insuperable."
+            </p>
+            <p class="client-name">⭐⭐⭐⭐⭐ Juan P.</p>
+          </div>
+          <div class="testimonial-card">
+            <p data-key="testimonio2">
+              "Mi nueva PC gamer corre todo a ultra. ¡Gracias Iris Computer por
+              el armado profesional y rápido!"
+            </p>
+            <p class="client-name">⭐⭐⭐⭐⭐ María F.</p>
+          </div>
+          <div class="testimonial-card">
+            <p data-key="testimonio3">
+              "Fácil de comprar y el envío a Santa Cruz fue rapidísimo. El
+              monitor llegó en perfectas condiciones."
+            </p>
+            <p class="client-name">⭐⭐⭐⭐⭐ Carlos S.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="suscripcion" class="newsletter">
+        <h2 data-key="suscripcion_titulo">¡No te pierdas ninguna oferta!</h2>
+        <p data-key="suscripcion_desc">
+          Suscríbete a nuestro boletín para recibir descuentos exclusivos y
+          novedades.
+        </p>
+        <form action="#" method="POST" class="newsletter-form">
+          <input
+            type="email"
+            name="email"
+            placeholder="Ingresa tu correo electrónico..."
+            required
+            data-key="suscripcion_placeholder"
+          />
+          <button type="submit" data-key="suscripcion_boton">
+            Suscribirme
+          </button>
+        </form>
+      </section>
+
+      <section id="redes sociales" class="social-media">
+        <h2 data-key="redes_titulo">Síguenos en nuestras redes</h2>
+        <div class="iframe-container"></div>
+          <iframe
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FIrisComputerBolivia&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+            width="340"
+            height="400"
+            style="border: none; overflow: hidden"
+          ></iframe>
+          <iframe
+            src="https://www.instagram.com/iriscomputerbolivia/embed"
+            width="340"
+            height="400"
+          ></iframe>
+          <iframe
+            src="https://www.tiktok.com/embed/@iriscomputer?lang=es-419&referrer=https%3A%2F%2Fwww.iriscomputer.bo%2F"
+            width="340"
+            height="400"
+          ></iframe>
+        </div>
+      </section>
+
+    </main>
+    <div id="chatbot-container">
+      <div id="chat-window">
+        <div class="chat-header">
+          <h3>Asistente Virtual</h3>
+        </div>
+        <div id="chat-messages"></div>
+        <div class="chat-input-container">
+          <input
+            type="text"
+            id="chat-input"
+            placeholder="Escribe tu mensaje..."
+          />
+          <button id="chat-send-btn">➤</button>
+        </div>
+      </div>
+      <button id="chatbot-toggle-btn">
+        <img src="..\imagenes\chatbot1.png" alt="Chat" class="icon" />
+        <span class="close-icon">&times;</span>
+      </button>
+      <a href="https://api.whatsapp.com/send?phone=59170242672&text=¡Hola!%20Me%20gustaría%20evaluar%20su%20atención."
+         target="_blank"
+         id="whatsapp-btn"
+         class="floating-btn">
+          <img src="..\imagenes\whatsapp.webp" alt="WhatsApp Icon">
+      </a>
+    </div>
+
+    <footer class="footer">
+      <p data-key="footer_derechos">
+        &copy; 2025 Iris computer. Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script src="..\SCRIPTS\script1.js"></script>
+    <script src="..\SCRIPTS\chatbot.js"></script>
+  </body>
+</html>

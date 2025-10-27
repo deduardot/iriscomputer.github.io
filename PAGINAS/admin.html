@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-key="admin_titulo_pagina">
+      Panel de Administrador - Iris Computer
+    </title>
+    <link rel="stylesheet" href="..\estilos\estilo1.css" />
+    <style>
+      /* Estilos adicionales para el panel de admin */
+      .admin-main {
+        padding: 40px;
+        max-width: 1200px;
+        margin: auto;
+      }
+      .admin-welcome {
+        margin-bottom: 40px;
+      }
+      .dashboard-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+      }
+      .dashboard-card {
+        background-color: #1a0f3d;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      }
+      .dashboard-card h3 {
+        margin-top: 0;
+        color: #4caf50;
+      }
+      .dashboard-card p {
+        font-size: 1.2em;
+        margin: 5px 0;
+      }
+      .logout-btn {
+        background-color: #c62828;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="header-left">
+          <a href="index.html"
+            ><img
+              src="..\imagenes\logo de iris.png"
+              alt="Logo de la Tienda"
+              class="logo"
+          /></a>
+          <nav class="nav">
+            <button
+              id="open-side-menu-btn"
+              class="nav-link"
+              data-key="nav_mapa"
+            >
+              Mapa del Sitio
+            </button>
+			<div class="dropdown">
+                <button class="dropdown-btn">Categorías</button>
+                <div class="dropdown-content">
+                    <a href="categoria.html?tipo=Almacenamiento">Almacenamiento</a>
+                    <a href="categoria.html?tipo=CPU">CPU</a>
+                    <a href="categoria.html?tipo=Fuente de poder">Fuente de poder</a>
+                    <a href="categoria.html?tipo=Gabinete">Gabinete</a>
+                    <a href="categoria.html?tipo=GPU">GPU</a>
+                    <a href="categoria.html?tipo=Laptop">Laptop</a>
+                    <a href="categoria.html?tipo=Memoria RAM">Memoria RAM</a>
+                    <a href="categoria.html?tipo=Monitor">Monitor</a>
+                    <a href="categoria.html?tipo=Placa madre">Placa madre</a>
+                    <a href="categoria.html?tipo=Refrigeracion">Refrigeracion</a>
+                </div>
+             </div>
+            <a href="nosotros.html" class="nav-link" data-key="nav_nosotros"
+              >Sobre Nosotros</a
+            >
+            <a href="catalogo.html" class="nav-link" data-key="nav_productos"
+              >Productos</a
+            >
+            <a href="contactos.html" class="nav-link" data-key="nav_contactos"
+              >Contactos</a
+            >
+          </nav>
+        </div>
+        <div class="header-center">
+          <form action="busqueda.html" method="GET">
+            <input
+              type="search"
+              name="q"
+              placeholder="Buscar productos..."
+              class="search-bar"
+              data-key="search_placeholder"
+            />
+          </form>
+        </div>
+        <div class="header-right">
+          <div class="dropdown">
+            <button class="dropdown-btn" data-key="nav_tema">Tema</button>
+            <div class="dropdown-content">
+              <a href="#" id="theme-light" data-key="nav_claro">Claro</a>
+              <a href="#" id="theme-dark" data-key="nav_oscuro">Oscuro</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown-btn" data-key="nav_idioma">Idioma</button>
+            <div class="dropdown-content">
+              <a href="#" id="lang-es">Español</a>
+              <a href="#" id="lang-en">English</a>
+            </div>
+          </div>
+          <a
+            href="iniciosesion.html"
+            class="nav-link"
+            data-key="nav_iniciar_sesion"
+            >Iniciar Sesión / Registrarse</a
+          >
+          <a href="#" class="nav-link">🛒</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <div class="admin-welcome">
+        <h1 data-key="admin_titulo">Panel de Administrador</h1>
+        <p data-key="admin_bienvenida">
+          Bienvenido. Aquí tienes un resumen confidencial del estado de la
+          empresa.
+        </p>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="dashboard-card">
+          <h3 data-key="admin_ventas_titulo">
+            Resumen de Ventas (Octubre 2025)
+          </h3>
+          <p>
+            <strong data-key="admin_ventas_ingresos">Ingresos del Mes:</strong>
+            Bs. 150,000
+          </p>
+          <p>
+            <strong data-key="admin_ventas_pedidos">Pedidos Totales:</strong>
+            125
+          </p>
+          <p>
+            <strong data-key="admin_ventas_ticket">Ticket Promedio:</strong> Bs.
+            1,200
+          </p>
+        </div>
+        <div class="dashboard-card">
+          <h3 data-key="admin_inventario_titulo">Estado del Inventario</h3>
+          <p>
+            <strong data-key="admin_inventario_productos"
+              >Productos en Catálogo:</strong
+            >
+            250
+          </p>
+          <p>
+            <strong data-key="admin_inventario_stock_bajo"
+              >Productos con Bajo Stock (&lt;5):</strong
+            >
+            15
+          </p>
+          <p>
+            <strong data-key="admin_inventario_valor"
+              >Valor Total del Inventario:</strong
+            >
+            Bs. 850,000
+          </p>
+        </div>
+        <div class="dashboard-card">
+          <h3 data-key="admin_usuarios_titulo">Actividad de Usuarios</h3>
+          <p>
+            <strong data-key="admin_usuarios_nuevos"
+              >Nuevos Registros (Mes):</strong
+            >
+            75
+          </p>
+          <p>
+            <strong data-key="admin_usuarios_activos"
+              >Usuarios Activos Hoy:</strong
+            >
+            30
+          </p>
+          <p>
+            <strong data-key="admin_usuarios_ultimo_pedido"
+              >Último Pedido:</strong
+            >
+            #125 - Juan Pérez
+          </p>
+        </div>
+      </div>
+
+      <button id="logout-btn" class="logout-btn" data-key="admin_cerrar_sesion">
+        Cerrar Sesión
+      </button>
+    </main>
+
+    <footer class="footer">
+      <p data-key="footer_derechos">
+        &copy; 2025 Iris computer. Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script src="..\scripts\script1.js"></script>
+    <script>
+      document
+        .getElementById("logout-btn")
+        .addEventListener("click", function () {
+          localStorage.removeItem("userRole");
+          window.location.href = "index.html";
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoría de Productos</title>
+    <link rel="stylesheet" href="..\estilos\estilo1.css">
+    <link rel="stylesheet" href="..\estilos\estilo2.css"> 
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <a href="index.html"><img src="..\imagenes\logo de iris.png" alt="Logo" class="logo"></a>
+                <nav class="nav">
+					<button
+                      id="open-side-menu-btn"
+                      class="nav-link"
+                      data-key="nav_mapa"
+                     >
+                     Mapa del Sitio
+                    </button>
+                    <div class="dropdown">
+                        <button class="dropdown-btn">Categorías</button>
+                        <div class="dropdown-content">
+                            <a href="categoria.html?tipo=Almacenamiento">Almacenamiento</a>
+                            <a href="categoria.html?tipo=CPU">CPU</a>
+                            <a href="categoria.html?tipo=Fuente de poder">Fuente de poder</a>
+                            <a href="categoria.html?tipo=Gabinete">Gabinete</a>
+                            <a href="categoria.html?tipo=GPU">GPU</a>
+                            <a href="categoria.html?tipo=Laptop">Laptop</a>
+                            <a href="categoria.html?tipo=Memoria RAM">Memoria RAM</a>
+                            <a href="categoria.html?tipo=Monitor">Monitor</a>
+                            <a href="categoria.html?tipo=Placa madre">Placa madre</a>
+                            <a href="categoria.html?tipo=Refrigeracion">Refrigeracion</a>
+                        </div>
+                    </div>
+                    <a href="nosotros.html" class="nav-link" data-key="nav_nosotros">Sobre Nosotros</a>
+            <a href="catalogo.html" class="nav-link" data-key="nav_productos">Productos</a>
+            <a href="contactos.html" class="nav-link" data-key="nav_contactos">Contactos</a>
+                </nav>
+            </div>
+            <div class="header-center">
+                <form action="busqueda.html" method="GET">
+                    <input type="search" name="q" id="searchBar" placeholder="Buscar..." class="search-bar">
+                </form>
+            </div>
+            <div class="header-right">
+                <a href="iniciosesion.html" class="nav-link">Iniciar Sesión / Registrarse</a>
+                <a href="carrito.html" class="nav-link cart-icon-link">
+                    🛒
+                    <span id="cart-counter">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="busqueda-main">
+        <section class="results-section">
+            <h2 id="category-title">Cargando categoría...</h2>
+            <div id="productsContainer" class="products-grid">
+                </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Iris computer. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-header">
+                <h3 id="modalProductName">Nombre del Producto</h3>
+            </div>
+            <div class="modal-body">
+                <div class="modal-product-image">
+                    <img id="modalProductImage" src="" alt="Imagen del Producto">
+                </div>
+                <div class="modal-product-details">
+                    <p class="modal-product-price" id="modalProductPrice">Bs. 0.00</p>
+                    <h4>Descripción Completa</h4>
+                    <p id="modalProductDesc"></p>
+                    <h4>Especificaciones</h4>
+                    <ul id="modalProductSpecs"></ul>
+                    <p id="modalProductStock"></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary close-button">Cerrar</button>
+                <button class="btn-primary">Seleccionar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="..\scripts\busqueda.js"></script> 
+    <script src="..\scripts\script1.js"></script> 
+    <script src="..\scripts\categoria.js"></script>
+</body>
+</html>

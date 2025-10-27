@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-key="login_titulo_pagina">Iniciar Sesión / Registrarse</title>
+    <link rel="stylesheet" href="..\estilos\estilo1.css" />
+    <link rel="stylesheet" href="..\estilos\estilo3.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="header-left">
+          <a href="index.html"
+            ><img
+              src="../imagenes/logo de iris.png"
+              alt="Logo de la Tienda"
+              class="logo"
+          /></a>
+          <nav class="nav">
+            <button
+              id="open-side-menu-btn"
+              class="nav-link"
+              data-key="nav_mapa"
+            >
+              Mapa del Sitio
+            </button>
+			<div class="dropdown">
+                <button class="dropdown-btn">Categorías</button>
+                <div class="dropdown-content">
+                    <a href="categoria.html?tipo=Almacenamiento">Almacenamiento</a>
+                    <a href="categoria.html?tipo=CPU">CPU</a>
+                    <a href="categoria.html?tipo=Fuente de poder">Fuente de poder</a>
+                    <a href="categoria.html?tipo=Gabinete">Gabinete</a>
+                    <a href="categoria.html?tipo=GPU">GPU</a>
+                    <a href="categoria.html?tipo=Laptop">Laptop</a>
+                    <a href="categoria.html?tipo=Memoria RAM">Memoria RAM</a>
+                    <a href="categoria.html?tipo=Monitor">Monitor</a>
+                    <a href="categoria.html?tipo=Placa madre">Placa madre</a>
+                    <a href="categoria.html?tipo=Refrigeracion">Refrigeracion</a>
+                </div>
+             </div>
+            <a href="nosotros.html" class="nav-link" data-key="nav_nosotros"
+              >Sobre Nosotros</a
+            >
+            <a href="catalogo.html" class="nav-link" data-key="nav_productos"
+              >Productos</a
+            >
+            <a href="contactos.html" class="nav-link" data-key="nav_contactos"
+              >Contactos</a
+            >
+          </nav>
+        </div>
+        <div class="header-center">
+          <form action="busqueda.html" method="GET">
+            <input
+              type="search"
+              name="q"
+              placeholder="Buscar productos..."
+              class="search-bar"
+              data-key="search_placeholder"
+            />
+          </form>
+        </div>
+        <div class="header-right">
+          <div class="dropdown">
+            <button class="dropdown-btn" data-key="nav_tema">Tema</button>
+            <div class="dropdown-content">
+              <a href="#" id="theme-light" data-key="nav_claro">Claro</a>
+              <a href="#" id="theme-dark" data-key="nav_oscuro">Oscuro</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown-btn" data-key="nav_idioma">Idioma</button>
+            <div class="dropdown-content">
+              <a href="#" id="lang-es">Español</a>
+              <a href="#" id="lang-en">English</a>
+            </div>
+          </div>
+          <a
+            href="iniciosesion.html"
+            class="nav-link"
+            data-key="nav_iniciar_sesion"
+            >Iniciar Sesión / Registrarse</a
+          >
+          <a href="carrito.html" class="nav-link">🛒</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="form-main-container">
+        <div id="login-form-container" class="form-container">
+            <form id="login-form">
+                <h2>Iniciar Sesión</h2>
+                <div class="form-group">
+                    <label for="login-username">Usuario</label>
+                    <input type="text" id="login-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Contraseña</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <div class="form-group captcha-group">
+                    <label for="login-captcha">Captcha</label>
+                    <div class="captcha-box" id="captcha-text"></div>
+                    <input type="text" id="login-captcha" placeholder="Escribe el texto de arriba" required>
+                </div>
+                <button type="submit" class="btn-primary">Ingresar</button>
+                <p class="switch-form-text">¿No tienes cuenta? <a href="#" id="show-register-form">Regístrate</a></p>
+            </form>
+        </div>
+
+        <div id="register-form-container" class="form-container" style="display: none;">
+            <form id="register-form">
+                <h2>Crear Cuenta</h2>
+                <div class="form-group">
+                    <label for="register-name">Nombre</label>
+                    <input type="text" id="register-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-lastname">Apellido</label>
+                    <input type="text" id="register-lastname" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-username">Usuario</label>
+                    <input type="text" id="register-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Contraseña</label>
+                    <input type="password" id="register-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm-password">Confirmar Contraseña</label>
+                    <input type="password" id="register-confirm-password" required>
+                </div>
+                <button type="submit" class="btn-primary">Registrarse</button>
+                <p class="switch-form-text">¿Ya tienes cuenta? <a href="#" id="show-login-form">Inicia Sesión</a></p>
+            </form>
+        </div>
+    </main>
+    <div id="chatbot-container">
+      <div id="chat-window">
+        <div class="chat-header">
+          <h3>Asistente Virtual</h3>
+        </div>
+        <div id="chat-messages"></div>
+        <div class="chat-input-container">
+          <input
+            type="text"
+            id="chat-input"
+            placeholder="Escribe tu mensaje..."
+          />
+          <button id="chat-send-btn">➤</button>
+        </div>
+      </div>
+      <button id="chatbot-toggle-btn">
+        <img src="..\imagenes\chatbot1.png" alt="Chat" class="icon" />
+        <span class="close-icon">&times;</span>
+      </button>
+    </div>
+    <<footer class="footer">
+      <p data-key="footer_derechos">
+        &copy; 2025 Iris computer. Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script src="..\scripts\iniciosesion.js"></script>
+    <script src="..\scripts\script1.js"></script>
+  </body>
+</html>

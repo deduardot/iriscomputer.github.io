@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-key="contacto_titulo_pagina">Contacto | Iris Computer</title>
+    <link rel="stylesheet" href="..\estilos\estilo1.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="header-left">
+          <a href="index.html"
+            ><img
+              src="..\imagenes\logo de iris.png"
+              alt="Logo de la Tienda"
+              class="logo"
+          /></a>
+          <nav class="nav">
+            <button
+              id="open-side-menu-btn"
+              class="nav-link"
+              data-key="nav_mapa"
+            >
+              Mapa del Sitio
+            </button>
+			<div class="dropdown">
+                <button class="dropdown-btn">Categorías</button>
+                <div class="dropdown-content">
+                    <a href="categoria.html?tipo=Almacenamiento">Almacenamiento</a>
+                    <a href="categoria.html?tipo=CPU">CPU</a>
+                    <a href="categoria.html?tipo=Fuente de poder">Fuente de poder</a>
+                    <a href="categoria.html?tipo=Gabinete">Gabinete</a>
+                    <a href="categoria.html?tipo=GPU">GPU</a>
+                    <a href="categoria.html?tipo=Laptop">Laptop</a>
+                    <a href="categoria.html?tipo=Memoria RAM">Memoria RAM</a>
+                    <a href="categoria.html?tipo=Monitor">Monitor</a>
+                    <a href="categoria.html?tipo=Placa madre">Placa madre</a>
+                    <a href="categoria.html?tipo=Refrigeracion">Refrigeracion</a>
+                </div>
+             </div>
+            <a href="nosotros.html" class="nav-link" data-key="nav_nosotros"
+              >Sobre Nosotros</a
+            >
+            <a href="catalogo.html" class="nav-link" data-key="nav_productos"
+              >Productos</a
+            >
+            <a href="contactos.html" class="nav-link" data-key="nav_contactos"
+              >Contactos</a
+            >
+          </nav>
+        </div>
+        <div class="header-center">
+          <form action="busqueda.html" method="GET">
+            <input
+              type="search"
+              name="q"
+              placeholder="Buscar productos..."
+              class="search-bar"
+              data-key="search_placeholder"
+            />
+          </form>
+        </div>
+        <div class="header-right">
+          <div class="dropdown">
+            <button class="dropdown-btn" data-key="nav_tema">Tema</button>
+            <div class="dropdown-content">
+              <a href="#" id="theme-light" data-key="nav_claro">Claro</a>
+              <a href="#" id="theme-dark" data-key="nav_oscuro">Oscuro</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropdown-btn" data-key="nav_idioma">Idioma</button>
+            <div class="dropdown-content">
+              <a href="#" id="lang-es">Español</a>
+              <a href="#" id="lang-en">English</a>
+            </div>
+          </div>
+          <a
+            href="iniciosesion.html"
+            class="nav-link"
+            data-key="nav_iniciar_sesion"
+            >Iniciar Sesión / Registrarse</a
+          >
+          <a href="carrito.html" class="nav-link">🛒</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="contact-main">
+      <h1 data-key="contacto_titulo_principal">Contáctanos</h1>
+      <p class="subtitle" data-key="contacto_subtitulo">
+        Estamos listos para ayudarte con tus consultas técnicas y pedidos.
+      </p>
+
+      <section class="contact-grid">
+        <div class="contact-form-container">
+          <h2 data-key="contacto_form_titulo">Envíanos un Mensaje Directo</h2>
+          <form action="#" method="POST" class="contact-form">
+            <label for="name" data-key="contacto_form_nombre"
+              >Nombre Completo:</label
+            >
+            <input type="text" id="name" name="name" required />
+
+            <label for="email" data-key="contacto_form_email"
+              >Correo Electrónico:</label
+            >
+            <input type="email" id="email" name="email" required />
+
+            <label for="subject" data-key="contacto_form_asunto">Asunto:</label>
+            <input type="text" id="subject" name="subject" required />
+
+            <label for="message" data-key="contacto_form_mensaje"
+              >Mensaje:</label
+            >
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button
+              type="submit"
+              class="submit-btn"
+              data-key="contacto_form_boton"
+            >
+              Enviar Mensaje
+            </button>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <h2 data-key="contacto_info_titulo">Información de Contacto</h2>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h3 data-key="contacto_info_ubicacion">Nuestra Ubicación</h3>
+              <p>
+                3ER Y 4TO ANILLO CALLE, Pedro Suárez Arana 3180, Santa Cruz de
+                la Sierra
+              </p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <h3 data-key="contacto_info_telefono">Teléfono</h3>
+              <p>78108887</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3 data-key="contacto_info_email">Email</h3>
+              <p>ventas@iriscomputer.bo</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h3 data-key="contacto_info_horario">Horario de Atención</h3>
+              <p>Lun - Vie: 9:00 - 18:00</p>
+              <p>Sáb: 9:00 - 13:00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="location-map">
+        <h2 data-key="contacto_mapa_titulo">Encuéntranos en el Mapa</h2>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.957466595706!2d-63.21567829118362!3d-17.79369598309419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1c325e0eb1d0f%3A0x1eb6a3557d7521cf!2sIris%20Computer!5e0!3m2!1ses-419!2sbo!4v1761502099381!5m2!1ses-419!2sbo"
+            referrerpolicy="no-referrer-when-downgrade"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <div id="chatbot-container">
+      <div id="chat-window">
+        <div class="chat-header">
+          <h3>Asistente Virtual</h3>
+        </div>
+        <div id="chat-messages"></div>
+        <div class="chat-input-container">
+          <input
+            type="text"
+            id="chat-input"
+            placeholder="Escribe tu mensaje..."
+          />
+          <button id="chat-send-btn">➤</button>
+        </div>
+      </div>
+      <button id="chatbot-toggle-btn">
+        <img src="..\imagenes\chatbot1.png" alt="Chat" class="icon" />
+        <span class="close-icon">&times;</span>
+      </button>
+    </div>
+    <footer class="footer">
+      <p data-key="footer_derechos">
+        &copy; 2025 Iris computer. Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script src="..\scripts\script1.js"></script>
+    <script src="..\scripts\chatbot.js"></script>
+
+    <div id="page-overlay" class="page-overlay"></div>
+    <div id="side-navigation-menu" class="side-menu">
+        <div class="side-menu-header">
+            <h3>Mapa del Sitio</h3>
+            <button id="close-side-menu-btn" class="close-btn">&times;</button>
+        </div>
+        <div class="side-menu-content">
+            <div class="map-item">
+                <h4>En Esta Página</h4>
+                <ul>
+                    <li><a href="index.html#servicios">🏆 Servicios y Ventajas</a></li>
+                    <li><a href="index.html#oferta-flash">🔥 Oferta Flash</a></li>
+                </ul>
+            </div>
+            <div class="map-item">
+                <h4>Otras Páginas</h4>
+                <ul>
+                    <li><a href="catalogo.html">📖 Catálogo Completo</a></li>
+                    <li><a href="sobre-nosotros.html">🏢 Sobre Nosotros</a></li>
+                    <li><a href="contactos.html">📞 Contacto</a></li>
+                    <li><a href="iniciosesion.html">👤 Iniciar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
