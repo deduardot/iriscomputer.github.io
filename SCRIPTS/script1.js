@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Oculta el enlace "Iniciar Sesión"
             if (loginLink) {
                 loginLink.style.display = 'none';
+				loginLink.removeAttribute('data-key');
             }
 
             // Crea el mensaje de bienvenida
@@ -679,3 +680,4 @@ document.addEventListener("DOMContentLoaded", function () {
   const savedLanguage = localStorage.getItem("language") || "es";
   translatePage(savedLanguage);
 });
+
