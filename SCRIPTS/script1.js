@@ -41,8 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
             
             // Oculta el enlace "Iniciar Sesión"
             if (loginLink) {
-                loginLink.style.display = 'none';
-				loginLink.removeAttribute('data-key');
+                loginLink.style.setProperty('display', 'none', 'important');
             }
 
             // Crea el mensaje de bienvenida
@@ -72,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // --- SI EL USUARIO NO EXISTE (Sesión no iniciada) ---
             // Asegura que el enlace de login esté visible
             if (loginLink) {
-                loginLink.style.display = 'block';
+                loginLink.style.removeProperty('display');
             }
         }
     }
@@ -680,4 +679,5 @@ document.addEventListener("DOMContentLoaded", function () {
   const savedLanguage = localStorage.getItem("language") || "es";
   translatePage(savedLanguage);
 });
+
 
